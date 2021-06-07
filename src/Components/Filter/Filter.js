@@ -1,14 +1,14 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
-import style from './Style.module.css'
 import { connect } from 'react-redux'
 import * as actions from '../../redux/Contacts/action'
 import * as selectors from '../../redux/Contacts/contacts-selectors'
 
+
 const Filter = ({ value, onChange }) => {
   return (
-    <label className={style.label}> Find contacts by name
-      <input type="text" value={value} onChange={onChange} />
+    <label className='label}'> Find contacts by name
+      <input type="text" value={value} onChange={onChange} className='input' />
     </label>
             
   )

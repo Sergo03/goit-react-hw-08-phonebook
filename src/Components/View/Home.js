@@ -21,9 +21,9 @@ const HomeView = ({name,isAuthenticated}) => (
   <div style={styles.container}>
     
     {isAuthenticated?<h1 style={styles.title}>
-      Hello, {name} 
+      Hello, {name}! 
       
-    </h1>:<h1 style={styles.title}>Please login</h1>}
+    </h1>:<h1 style={styles.title}>If you want use our service, please login!</h1>}
     
   </div>
 );

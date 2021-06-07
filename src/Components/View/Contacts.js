@@ -15,12 +15,12 @@ class Contacts extends Component{
 }
     render() {
         return (
-            <div>
+            <div className='contact'>
                 {this.props.error && <h1>{this.props.error}</h1>}
                 {this.props.isLoadingContacts && <h1>Loading...</h1>}
-                <h1>Phonebook</h1>
+                <h1 className='contact_text'>Phonebook</h1>
                 <Form onSubmit={this.submitForm} />
-                <h2>Contacts</h2>
+                <h2 className='contact_text'>Contacts</h2>
                 <Filter />
                 <Render />
             </div>

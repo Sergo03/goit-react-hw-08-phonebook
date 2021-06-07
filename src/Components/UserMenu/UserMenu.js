@@ -2,14 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as authSelectors from '../../redux/Auth/auth-selectors'
 import * as authOperations from '../../redux/Auth/auth-operations'
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = {
   container: {
     display: 'flex',
     alignItems: 'center',
-  },
-  avatar: {
-    marginRight: 4,
   },
   name: {
     fontWeight: 700,
@@ -20,9 +19,9 @@ const styles = {
 const UserMenu = ({ name, onLogout }) => (
   <div style={styles.container}>
     <span style={styles.name}>Welcome, {name}</span>
-    <button type="button" onClick={onLogout}>
+    <Button type="button" variant="dark" onClick={onLogout}>
       Logout
-    </button>
+    </Button>
   </div>
 );
 

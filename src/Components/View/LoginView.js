@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as authOperations from '../../redux/Auth/auth-operations'
+import * as authOperations from '../../redux/Auth/auth-operations';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const styles = {
   form: {
     width: 320,
+    // display:'flex',
   },
   label: {
     display: 'flex',
@@ -46,6 +52,7 @@ class LoginView extends Component {
           <label style={styles.label}>
             Email
             <input
+              
               type="email"
               name="email"
               value={email}
@@ -56,16 +63,17 @@ class LoginView extends Component {
           <label style={styles.label}>
            Password
             <input
+              
               type="password"
               name="password"
               value={password}
               onChange={this.handleChange}
             />
           </label>
-
-          <button type="submit">Войти</button>
+          <Button type="submit" variant="primary">Login</Button>
         </form>
       </div>
+      
     );
   }
 }

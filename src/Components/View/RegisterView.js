@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as authOperations from '../../redux/Auth/auth-operations'
+import * as authOperations from '../../redux/Auth/auth-operations';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = {
   form: {
@@ -74,7 +76,7 @@ class RegisterView extends Component {
             />
           </label>
 
-          <button type="submit">Зарегистрироваться</button>
+          <Button type="submit" variant="primary">Register</Button>
         </form>
       </div>
     );

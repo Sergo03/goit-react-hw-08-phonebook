@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropsTypes from 'prop-types';
-import style from './Style.module.css'
 import {connect} from 'react-redux'
 import * as operations from '../../redux/Contacts/operations'
 import * as selectors from '../../redux/Contacts/contacts-selectors'
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -35,11 +37,11 @@ class Form extends Component{
   render() {
     
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className='from_contact'>
         
-        <label className={style.label}> Name
+        <label className='label'> Name
           <input
-            className={style.input_name}
+            className='input_name'
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -49,9 +51,9 @@ class Form extends Component{
             value={this.state.name}
           />
         </label> 
-        <label className={style.label}>Number
+        <label className='label'>Number
           <input
-            className={style.input_tel}
+            className='input_tel'
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -61,10 +63,10 @@ class Form extends Component{
             value={this.state.number}
           />
         </label>
-
-        <button type="submit" className={style.btn_add}>Add contact</button>
-
+         
+        <Button type="submit"  variant="success" className='input_btn'>Add contact</Button>
       </form>
+      
 
     )
   }
