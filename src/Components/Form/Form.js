@@ -5,6 +5,7 @@ import * as operations from '../../redux/Contacts/operations'
 import * as selectors from '../../redux/Contacts/contacts-selectors'
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import style from './Style.module.css'
 
 
 
@@ -39,9 +40,9 @@ class Form extends Component{
     return (
       <form onSubmit={this.handleSubmit} className='from_contact'>
         
-        <label className='label'> Name
+        <label className={style.label_name}> Name
           <input
-            className='input_name'
+            className={style.input_name}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -51,7 +52,7 @@ class Form extends Component{
             value={this.state.name}
           />
         </label> 
-        <label className='label'>Number
+        <label className={style.label_number}>Number
           <input
             className='input_tel'
             type="tel"
@@ -64,7 +65,7 @@ class Form extends Component{
           />
         </label>
          
-        <Button type="submit"  variant="success" className='input_btn'>Add contact</Button>
+        <Button type="submit" variant="success" className={style.input_btn}>Add contact</Button>
       </form>
       
 
